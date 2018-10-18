@@ -1,6 +1,6 @@
 # Trucking-Calculator
 Calculator App for Truckers
 
-Build Statuses:
+Build Status:
 <br>
-[![Build status](https://ci.appveyor.com/api/projects/status/j3oomqr18qc45u85?svg=true)](https://ci.appveyor.com/project/Kakarot/trucking-calculator-rdd3v)
+[![Build Status](https://disgaeax.visualstudio.com/Bare-Minimum-Studios-Trucking-Calculator/_apis/build/status/Bare-Minimum-Studios-Trucking-Calculator-Xamarin.Android-CI)](https://disgaeax.visualstudio.com/Bare-Minimum-Studios-Trucking-Calculator/_build/latest?definitionId=3)

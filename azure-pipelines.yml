@@ -3,7 +3,6 @@
 # Add steps that test, sign, and distribute an app, save build artifacts, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/xamarin
 
-- job: Android
 pool:
   vmImage: 'macOS 10.13'
 
@@ -24,19 +23,9 @@ steps:
     outputDirectory: '$(outputDirectory)'
     configuration: '$(buildConfiguration)'
 
-- job: iOS
-  pool:
-    vmImage: 'macOS-10.13'
-  variables:
-    buildConfiguration: 'Release'
-  steps:
-  - task: NuGetToolInstaller@0
-  - task: NuGetCommand@2
-    inputs:
-      restoreSolution: '**/*.sln'
-  - task: XamariniOS@2
-    inputs:
-      solutionFile: '**/*.sln'
-      configuration: '$(buildConfiguration)'
-      buildForSimulator: true
-      packageApp: false
+- task: XamariniOS@2
+  inputs:
+    solutionFile: '**/*.sln'
+    configuration: '$(buildConfiguration)'
+    buildForSimulator: true
+    packageApp: false

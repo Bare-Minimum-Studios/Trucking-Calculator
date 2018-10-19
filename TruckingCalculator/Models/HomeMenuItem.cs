@@ -7,7 +7,8 @@ namespace TruckingCalculator.Models
     public enum MenuItemType
     {
         Browse,
-        About
+        About,
+        ConvenienceCalculation
     }
     public class HomeMenuItem
     {

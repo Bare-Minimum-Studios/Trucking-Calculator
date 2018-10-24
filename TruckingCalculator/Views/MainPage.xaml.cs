@@ -16,8 +16,8 @@ namespace TruckingCalculator.Views
             InitializeComponent();
 
             MasterBehavior = MasterBehavior.Popover;
-
-            MenuPages.Add((int)MenuItemType.Browse, (NavigationPage)Detail);
+            NavigateFromMenu((int)MenuItemType.About);
+           
         }
 
         public async Task NavigateFromMenu(int id)

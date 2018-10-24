@@ -37,7 +37,7 @@
                 
                 <Button Text="Calculate" Clicked="Handle_Clicked" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" />
                 
-                <Label Text="%  of Witholding" TextColor="Red" Grid.Row="3" Grid.Column="0"  />
+                <Label Text="Percentage of Witholding" TextColor="Red" Grid.Row="3" Grid.Column="0"  />
                 <Label Text="{Binding PercentageOfMoneyWitheld, StringFormat='{0:N}%'}" TextColor="Red" 
                        Grid.Row="3" Grid.Column="1"  />
 
@@ -51,7 +51,7 @@
                 <Label Text="Final Payment = How much you were paid" FontAttributes="Italic" 
                        Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2"></Label>
 
-                <Label Text="% of Witholding = Percentage taken out" FontAttributes="Italic" 
+                <Label Text="Percentage of Witholding = Percentage taken out" FontAttributes="Italic" 
                        Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="2"></Label>
 
                 <Label Text="This app was created to solve simple problems that real truckers face every day." 

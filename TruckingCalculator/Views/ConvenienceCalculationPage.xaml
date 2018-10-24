@@ -1,73 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="TruckingCalculator.Views.ConvenienceCalculationPage">
+    <ContentPage.Padding>
+        <OnPlatform iOS="5,20,0,0"
+                    Android="5,0,0,0">
+            
+        </OnPlatform>
+    </ContentPage.Padding>
     <ContentPage.Content>
-        <StackLayout Margin="10,20,0,0">
-            <StackLayout Orientation="Horizontal">
-                <Label Text="Original Payment" />
-                <Entry Text="{Binding OriginalPayment}" Margin="15,0,0,0" />
-            </StackLayout>
-            <StackLayout Orientation="Horizontal">
-                <Label Text="Final Payment" />
-                <Entry Text="{Binding OriginalPayment}" Margin="38,0,0,0" />
-            </StackLayout>
-            <Button Text="Calculate" Clicked="Handle_Clicked" />
-            <StackLayout Orientation="Horizontal">
-                <Label Text="%  of Witholding" TextColor="Red" />
-                <Label Text="{Binding PercentageOfMoneyWitheld, StringFormat='{0:N}%'}" TextColor="Red" Margin="15,0,0,0" />
-            </StackLayout>
-            <Label Margin="0,30,0,0">
-                <Label.FormattedText>
-                    <FormattedString>
-                        <FormattedString.Spans>
-                            <Span Text="Explanation:" FontAttributes="Bold" />
-                        </FormattedString.Spans>
-                    </FormattedString>
-                </Label.FormattedText>
-            </Label>
-            <Label>
-                <Label.FormattedText>
-                    <FormattedString>
-                        <FormattedString.Spans>
-                            <Span Text="Original Payment" FontAttributes="Italic" />
-                            <Span Text="  = " />
-                            <Span Text="Worth of the load" />
-                        </FormattedString.Spans>
-                    </FormattedString>
-                </Label.FormattedText>
-            </Label>
-            <Label>
-                <Label.FormattedText>
-                    <FormattedString>
-                        <FormattedString.Spans>
-                            <Span Text="Final Payment" FontAttributes="Italic" />
-                            <Span Text="       = " />
-                            <Span Text="How much you were paid" />
-                        </FormattedString.Spans>
-                    </FormattedString>
-                </Label.FormattedText>
-            </Label>
-            <Label>
-                <Label.FormattedText>
-                    <FormattedString>
-                        <FormattedString.Spans>
-                            <Span Text="% of Witholding" FontAttributes="Italic" />
-                            <Span Text="    = " />
-                            <Span Text="Percentage taken out" />
-                        </FormattedString.Spans>
-                    </FormattedString>
-                </Label.FormattedText>
-            </Label>
-            <Label>
-                <Label.FormattedText>
-                    <FormattedString>
-                        <FormattedString.Spans>
-                            <Span Text="This app was created to solve simple problems" />
-                            <Span Text=" " />
-                            <Span Text="that real truckers face every day." />
-                        </FormattedString.Spans>
-                    </FormattedString>
-                </Label.FormattedText>
-            </Label>
+        
+
+        <StackLayout >
+            <Grid>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition Height="20"></RowDefinition>
+                    <RowDefinition Height="1"></RowDefinition>
+                    <RowDefinition Height="20"></RowDefinition>
+                    <RowDefinition Height="20"></RowDefinition>
+                    <RowDefinition Height="20"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    
+                </Grid.ColumnDefinitions>
+                
+                <Label Text="Original Payment" VerticalTextAlignment="Center" Grid.Row="0" Grid.Column="0" />
+                <Entry Text="{Binding OriginalPayment}"   Grid.Row="0" Grid.Column="1" Keyboard="Numeric" />
+
+                <Label Text="Final Payment" VerticalTextAlignment="Center" Grid.Row="1" Grid.Column="0" />
+                <Entry Text="{Binding FinalPayment}"  Grid.Row="1" Grid.Column="1" Keyboard="Numeric" />
+                
+                <Button Text="Calculate" Clicked="Handle_Clicked" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" />
+                
+                <Label Text="%  of Witholding" TextColor="Red" Grid.Row="3" Grid.Column="0"  />
+                <Label Text="{Binding PercentageOfMoneyWitheld, StringFormat='{0:N}%'}" TextColor="Red" 
+                       Grid.Row="3" Grid.Column="1"  />
+
+                <Label Text="Explanation:" FontAttributes="Bold" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" ></Label>
+                <BoxView Grid.Row="5" Grid.Column="0" BackgroundColor="Blue"
+                         HeightRequest="1" MinimumHeightRequest="1"  ></BoxView>
+
+                <Label Text="Original Payment = Worth of the load" FontAttributes="Italic" 
+                       Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2"></Label>
+
+                <Label Text="Final Payment = How much you were paid" FontAttributes="Italic" 
+                       Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2"></Label>
+
+                <Label Text="% of Witholding = Percentage taken out" FontAttributes="Italic" 
+                       Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="2"></Label>
+
+                <Label Text="This app was created to solve simple problems that real truckers face every day." 
+                       FontAttributes="Italic" 
+                       Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="2"></Label>
+
+            </Grid>
+            
+            
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

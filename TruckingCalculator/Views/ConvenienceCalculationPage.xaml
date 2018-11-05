@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="TruckingCalculator.Views.ConvenienceCalculationPage">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="TruckingCalculator.Views.ConvenienceCalculationPage">
     <ContentPage.Padding>
         <OnPlatform iOS="5,20,0,0"
                     Android="5,0,0,0">
@@ -29,10 +31,10 @@
                 </Grid.ColumnDefinitions>
                 
                 <Label Text="Original Payment" VerticalTextAlignment="Center" Grid.Row="0" Grid.Column="0" />
-                <Entry Text="{Binding OriginalPayment}"   Grid.Row="0" Grid.Column="1" Keyboard="Numeric" />
+                <Entry Text="{Binding OriginalPayment}" x:Name="_originalPayment" Focused="OriginalFocus" Grid.Row="0" Grid.Column="1" Keyboard="Numeric" />
 
                 <Label Text="Final Payment" VerticalTextAlignment="Center" Grid.Row="1" Grid.Column="0" />
-                <Entry Text="{Binding FinalPayment}"  Grid.Row="1" Grid.Column="1" Keyboard="Numeric" />
+                <Entry Text="{Binding FinalPayment}" x:Name="_finalPayment" Focused="FinalFocus" Grid.Row="1" Grid.Column="1" Keyboard="Numeric" />
                 
                 <Button Text="Calculate" Clicked="Handle_Clicked" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" />
               

@@ -20,6 +20,24 @@ namespace TruckingCalculator.Views
             BindingContext = this.viewModel;
         }
 
+        void OriginalFocus(object sender, bool IsFocused)
+        {
+            
+            if (IsFocused)
+            {
+                _originalPayment.Text = "";
+            }
+        }
+
+        void FinalFocus(object sender, bool IsFocused)
+        {
+
+            if (IsFocused)
+            {
+                _finalPayment.Text = "";
+            }
+        }
+
         void Handle_Clicked(object sender, System.EventArgs e)
         {
             if (viewModel.OriginalPayment != 0)
